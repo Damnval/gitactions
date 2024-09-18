@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 | sample code
  another one
+  3rd line
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
