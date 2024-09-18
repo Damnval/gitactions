@@ -12,6 +12,6 @@ class UserIndexController extends Controller
      */
     public function __invoke(): string
     {
-        return User::all();
+        return User::query()->get();
     }
 }
