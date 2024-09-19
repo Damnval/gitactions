@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 added line for develop
+should not allow for develop
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
