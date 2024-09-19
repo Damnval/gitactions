@@ -23,3 +23,7 @@ Route::group(['prefix' => 'users'], function () {
     Route::get('',UserIndexController::class)->name('.index');
 });
 
+Route::group(['prefix' => 'posts'], function () {
+    Route::get('',PostIndexController::class)->name('.index');
+});
+

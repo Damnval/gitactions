@@ -7,9 +7,6 @@ use Illuminate\Http\Request;
 
 class UserIndexController extends Controller
 {
-    /**
-     * @throws AuthorizationException
-     */
     public function __invoke(): string
     {
         return User::query()->get();
