@@ -11,16 +11,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-            ref: ${{ github.head_ref }}
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.1'
-          extensions: zip, mysql, gd
-          coverage: none
-        env:
-          runner: self-hosted
+          ref: ${{ github.head_ref }}
+          node-version: 16
 
       - name: Run PHP CS Fixer
         run: composer run format
