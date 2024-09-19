@@ -6,6 +6,7 @@ class PostIndexController extends Controller
 {
     public function __invoke(): string
     {
+        // uncessary comment
         return $this->test();
     }
 
