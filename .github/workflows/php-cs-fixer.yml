@@ -14,7 +14,7 @@ jobs:
             ref: ${{ github.head_ref }}
 
       - name: Run PHP CS Fixer
-        uses: composer run format
+        run: composer run format
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
