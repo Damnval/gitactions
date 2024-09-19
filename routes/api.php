@@ -12,10 +12,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "api" middleware group. Make something great!
 |
-| sample code
- another one
-  3rd line
-  4th line
+ should not allow
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
