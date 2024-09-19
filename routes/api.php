@@ -18,12 +18,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
 Route::group(['prefix' => 'users'], function () {
-    Route::get('',UserIndexController::class)->name('.index');
+    Route::get('', UserIndexController::class)->name('.index');
 });
 
 Route::group(['prefix' => 'posts'], function () {
-    Route::get('',PostIndexController::class)->name('.index');
+    Route::get('', PostIndexController::class)->name('.index');
 });
-
