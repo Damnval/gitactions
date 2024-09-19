@@ -1,0 +1,22 @@
+name: Perform static analysis with PHPStan
+
+on: [pull_request]
+
+jobs:
+  php-cs-fixer:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          node-version: 16
+
+      - name: Install Dependencies
+        run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist
+
+      - name: Run Phpstan
+        run: composer run phpstan
+
