@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 class PostIndexController extends Controller
 {
-    public function __invoke(): string
+    public function __invoke(): bool
     {
         // uncessary comment this ilne
         return $this->test();
     }
 
-    public function test(): string
+    public function test(): bool
     {
         return true;
     }
