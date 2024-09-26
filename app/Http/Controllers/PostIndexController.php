@@ -14,7 +14,7 @@ class PostIndexController extends Controller
         return $this->test();
     }
 
-    public function test(): string
+    public function test(): bool
     {
         return true;
     }
