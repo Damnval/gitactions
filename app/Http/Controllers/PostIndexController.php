@@ -1,14 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
 
 class PostIndexController extends Controller
 {
     public function __invoke(): bool
     {
         // uncessary comment this fuck
-        if ( !'val'==='val') {
+        if (! 'val' === 'val') {
             return true;
         }
 
