@@ -11,12 +11,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-            ref: ${{ github.head_ref }}
+          ref: ${{ github.head_ref }}
+          node-version: 16
+
+      - name: Install Dependencies
+        run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist
 
       - name: Run PHP CS Fixer
-        uses: composer run format
+        run: composer run format
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-            commit_message: Fix styling
+          commit_message: Apply PHP CS Fixer Changes
+
