@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -12,15 +13,16 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "api" middleware group. Make something great!
 |
- should not allow
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
 Route::group(['prefix' => 'users'], function () {
-    Route::get('',UserIndexController::class)->name('.index');
+    Route::get('', Controllers\UserIndexController::class)->name('.index');
 });
 
+Route::group(['prefix' => 'posts'], function () {
+    Route::get('', Controllers\PostIndexController::class)->name('.index');
+});
