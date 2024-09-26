@@ -1,7 +1,7 @@
 name: Format with PHP CS Fixer
 
 # will only trigger when creating a pull request event to any branch
-on: [pull_request, push]
+on: [pull_request]
 
 jobs:
   php-cs-fixer:
