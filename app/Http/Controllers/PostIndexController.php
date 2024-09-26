@@ -6,7 +6,11 @@ class PostIndexController extends Controller
 {
     public function __invoke(): bool
     {
-        // uncessary comment this ilne
+        // uncessary comment this shit
+        if (! 'val' === 'val') {
+            return true;
+        }
+
         return $this->test();
     }
 
