@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 
 class PostIndexController extends Controller
 {
@@ -10,7 +11,7 @@ class PostIndexController extends Controller
         return $this->test();
     }
 
-    public function test(): bool
+    public function test(): string
     {
         return true;
     }
