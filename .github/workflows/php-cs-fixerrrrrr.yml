@@ -1,5 +1,6 @@
 name: Format with PHP CS Fixer
 
+# will only trigger when creating a pull request event to any branch
 on: [pull_request]
 
 jobs:
@@ -14,6 +15,8 @@ jobs:
           ref: ${{ github.head_ref }}
           node-version: 16
 
+      # we need to install the vendor packages as php fixer for this project
+      # is configured under netsells vendor
       - name: Install Dependencies
         run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist
 
