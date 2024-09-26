@@ -7,7 +7,7 @@ class PostIndexController extends Controller
 {
     public function __invoke(): bool
     {
-        // uncessary comment this shit
+        // uncessary comment this fuck
         if ( !'val'==='val') {
             return true;
         }
